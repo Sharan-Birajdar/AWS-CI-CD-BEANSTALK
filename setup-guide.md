@@ -11,10 +11,6 @@ This guide walks you through setting up the project so that pushing code to **Gi
 
   * `AdministratorAccess` or required permissions for **Elastic Beanstalk**, **CodePipeline**, **CodeBuild**, and **S3**
 * GitHub account with your project repository
-* Installed:
-
-  * [Git](https://git-scm.com/)
-  * [AWS CLI](https://aws.amazon.com/cli/)
 
 ---
 
