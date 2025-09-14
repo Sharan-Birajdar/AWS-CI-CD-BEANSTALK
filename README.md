@@ -3,7 +3,8 @@
 This project demonstrates a fully automated CI/CD pipeline using **AWS Elastic Beanstalk**, **AWS CodePipeline**, and **GitHub**.  
 Whenever code is pushed to the GitHub repository, the pipeline automatically builds and deploys the latest version to Elastic Beanstalk.
 
-https://github.com/Sharan-Birajdar/Code2Cloud/blob/main/Doc/Images/architecture%20diagram.png?raw=true
+![Alt text](https://github.com/Sharan-Birajdar/Code2Cloud/blob/main/Doc/Images/architecture%20diagram.png?raw=true)
+
 ---
 
 ## 🔧 Project Architecture
