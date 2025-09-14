@@ -1,7 +1,3 @@
-Got it 👍 I’ll create a **step-by-step setup guide** for your project (GitHub → CodePipeline → Elastic Beanstalk). You can include this in your repo as `SETUP.md` or inside the README.
-
----
-
 # 🚀 Setup Guide: Code2Cloud (CI/CD with AWS Elastic Beanstalk & CodePipeline)
 
 This guide walks you through setting up the project so that pushing code to **GitHub** automatically deploys it to **AWS Elastic Beanstalk** using **AWS CodePipeline**.
@@ -113,23 +109,3 @@ Now your project is fully automated:
 
 * Edit code → Push to GitHub → AWS updates website 🚀
 
----
-
-## 🔧 Troubleshooting
-
-* If pipeline fails at **Source**, check GitHub connection permissions.
-* If pipeline fails at **Deploy**, check Beanstalk logs for errors.
-* Ensure `index.html` is in the **root folder** for static sites.
-
----
-
-## 📢 Next Steps (Optional)
-
-* Add **Route 53** for a custom domain
-* Enable **HTTPS with ACM (SSL/TLS)**
-* Add **CloudWatch alarms** for monitoring
-* Add **CodeBuild** stage for testing
-
----
-
-Would you like me to also give you a **Terraform setup version** of this (so you can create Beanstalk + CodePipeline infra as code), or just keep it manual (AWS Console + GitHub)?
