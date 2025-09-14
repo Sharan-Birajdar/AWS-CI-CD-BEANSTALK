@@ -39,5 +39,19 @@ Whenever code is pushed to the GitHub repository, the pipeline automatically bui
 
 ---
 
-## 📂 Project Structure
+## 🔑 Key Benefits
+
+- Zero-downtime deployments  
+- Automated CI/CD workflow  
+- Scalable & managed infrastructure with AWS Beanstalk  
+- Easy rollback to previous versions  
+
+---
+
+## 📝 Future Enhancements
+
+- Add automated testing before deployments  
+- Enable notifications (Slack/Email) for pipeline events  
+- Add monitoring with AWS CloudWatch  
+
 
