@@ -1,1 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animated Single Page Website</title>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif;}
+    body{background:#fdfdfd;color:#333;line-height:1.6;overflow-x:hidden;}
 
+    /* Header */
+    header{
+      position:fixed;top:0;left:0;width:100%;
+      background:rgba(0,0,0,0.6);color:#fff;
+      padding:15px 50px;z-index:1000;
+      display:flex;justify-content:space-between;align-items:center;
+    }
+    header h1{font-size:24px;}
+    nav a{
+      color:#fff;text-decoration:none;margin-left:20px;transition:.3s;
+    }
+    nav a:hover{color:#ff6b6b;}
+
+    /* Hero Section */
+    .hero{
+      height:100vh;
+      background:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80') no-repeat center/cover;
+      display:flex;flex-direction:column;justify-content:center;align-items:center;
+      text-align:center;color:#fff;position:relative;
+    }
+    .hero::after{
+      content:'';position:absolute;top:0;left:0;width:100%;height:100%;
+      background:rgba(0,0,0,0.5);
+    }
+    .hero-content{position:relative;z-index:2;animation:fadeIn 2s ease;}
+    .hero h2{font-size:50px;margin-bottom:20px;animation:slideDown 2s;}
+    .hero p{font-size:20px;margin-bottom:30px;}
+    .btn{
+      padding:12px 25px;border:none;background:#ff6b6b;color:#fff;
+      font-size:16px;border-radius:25px;cursor:pointer;transition:.3s;
+    }
+    .btn:hover{background:#ff4040;transform:scale(1.05);}
+
+    /* Features */
+    section{padding:80px 50px;text-align:center;}
+    .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;}
+    .card{
+      background:#fff;padding:30px;border-radius:12px;
+      box-shadow:0 5px 15px rgba(0,0,0,0.1);
+      transition:transform .4s,box-shadow .4s;
+    }
+    .card:hover{transform:translateY(-10px);box-shadow:0 10px 25px rgba(0,0,0,0.2);}
+    .card img{width:100%;border-radius:8px;margin-bottom:15px;}
+
+    /* Gallery */
+    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:15px;}
+    .gallery img{
+      width:100%;border-radius:10px;transition:transform .5s;
+    }
+    .gallery img:hover{transform:scale(1.1);}
+
+    /* Contact */
+    .contact form{max-width:600px;margin:0 auto;display:flex;flex-direction:column;gap:15px;}
+    input,textarea{
+      padding:12px;border:1px solid #ccc;border-radius:8px;transition:.3s;
+    }
+    input:focus,textarea:focus{border-color:#ff6b6b;outline:none;}
+    form button{align-self:flex-start;}
+
+    /* Footer */
+    footer{
+      background:#111;color:#fff;text-align:center;padding:20px;margin-top:40px;
+    }
+
+    /* Animations */
+    @keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
+    @keyframes slideDown{from{transform:translateY(-50px);opacity:0;}to{transform:translateY(0);opacity:1;}}
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>MyWebsite</h1>
+    <nav>
+      <a href="#hero">Home</a>
+      <a href="#features">Features</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <h2>Welcome to My Website</h2>
+      <p>Beautiful animations, responsive design, and smooth experience</p>
+      <button class="btn">Get Started</button>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features">
+    <h2>Our Features</h2>
+    <p>Some highlights of what we provide</p>
+    <div class="features">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=600&q=80" alt="Feature 1">
+        <h3>Fast & Responsive</h3>
+        <p>Our design adapts to all screen sizes with smooth animations.</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=600&q=80" alt="Feature 2">
+        <h3>Beautiful UI</h3>
+        <p>Modern layouts with carefully selected images and colors.</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80" alt="Feature 3">
+        <h3>Clean Code</h3>
+        <p>Easy to customize with well-structured code and CSS effects.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <p>Hover to zoom in on the images</p>
+    <div class="gallery">
+      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="">
+      <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=600&q=80" alt="">
+      <img src="https://images.unsplash.com/photo-1521747116042-5a810fda9664?auto=format&fit=crop&w=600&q=80" alt="">
+      <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=600&q=80" alt="">
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact us</h2>
+    <p>We’d love to hear from you</p>
+    <div class="contact">
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+        <button class="btn" type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 MyWebsite | All rights reserved</p>
+  </footer>
+
+</body>
+</html>
