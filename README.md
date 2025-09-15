@@ -1,7 +1,9 @@
-# Code2Cloud 🚀
+# AWS Elastic Beanstalk CI/CD with CodePipeline & Route 53
 
-This project demonstrates a fully automated CI/CD pipeline using **AWS Elastic Beanstalk**, **AWS CodePipeline**, and **GitHub**.  
-Whenever code is pushed to the GitHub repository, the pipeline automatically builds and deploys the latest version to Elastic Beanstalk.
+This project demonstrates a **fully automated deployment pipeline** for a web application using **AWS Elastic Beanstalk**, **AWS CodePipeline**, **GitHub**, and **Amazon Route 53** for domain management.  
+
+Whenever new code is pushed to the GitHub repository, CodePipeline automatically builds and deploys it to Elastic Beanstalk. The application is accessible through a custom domain configured in Route 53.
+
 
 ![Alt text](https://github.com/Sharan-Birajdar/Code2Cloud/blob/main/Doc/Images/architecture%20diagram.png?raw=true)
 
@@ -20,33 +22,54 @@ Whenever code is pushed to the GitHub repository, the pipeline automatically bui
 3. **AWS Elastic Beanstalk (Hosting Platform)**
    - Deploys and manages the application.
    - Provides auto-scaling and load balancing.
+  
+4. **Amazon Route 53** 
+   - Provides custom domain name mapping to the Beanstalk environment. 
 
 ---
 
 ## ⚙️ Technologies Used
 
-- **AWS Elastic Beanstalk** – Application hosting  
-- **AWS CodePipeline** – Continuous Integration & Deployment  
-- **GitHub** – Source control and collaboration  
-- **HTML / CSS / JavaScript** – Frontend code (replace with your stack if needed)  
+-**AWS Elastic Beanstalk** – Application hosting & scaling  
+- **AWS CodePipeline** – Continuous integration & deployment (CI/CD)  
+- **GitHub** – Source code repository & version control  
+- **Amazon Route 53** – Domain name system (DNS) management    
 
 ---
 
 ## 🚀 How It Works
 
-1. Push code changes to the `main` branch of this GitHub repository.  
-2. CodePipeline automatically pulls the changes.  
-3. Elastic Beanstalk deploys the latest build.  
-4. The website updates without manual intervention. 🎉  
+1. **Code Push to GitHub**  
+   - Developer commits and pushes changes to the GitHub repository.  
 
+2. **CodePipeline Triggers**  
+   - AWS CodePipeline detects the new commit via the GitHub connection.  
+   - Pipeline automatically starts the deployment process.   
+
+3. **Deployment to Elastic Beanstalk**  
+   - Elastic Beanstalk deploys the latest build to the environment.  
+   - The application is now live and automatically scaled based on traffic.  
+
+4. **Route 53 Domain Mapping**  
+   - A custom domain managed by Amazon Route 53 points to the Elastic Beanstalk environment.  
+   - Users can access the app directly through `https://yourdomain.com`.  
+
+**Flow Summary:**  
+`GitHub (source code) ➝ CodePipeline (CI/CD) ➝ Elastic Beanstalk (hosting) ➝ Route 53 (custom domain)`  
+ 
 ---
 
 ## 🔑 Key Benefits
 
-- Zero-downtime deployments  
-- Automated CI/CD workflow  
-- Scalable & managed infrastructure with AWS Beanstalk  
-- Easy rollback to previous versions  
+- **Automated Deployments** – No manual intervention needed; every GitHub push is deployed automatically.  
+- **Scalability** – Elastic Beanstalk automatically handles scaling based on application load.  
+- **Custom Domain Integration** – Route 53 provides a professional, easy-to-remember domain name.  
+- **Reduced Downtime** – Blue/Green or Rolling updates in Beanstalk minimize downtime during deployments.  
+- **Centralized Pipeline** – CodePipeline provides a single place to manage CI/CD.  
+- **Cost-Effective** – Pay only for the AWS resources you use, with built-in monitoring and logging.  
+- **Flexibility** – Works with multiple programming languages (Node.js, Java, Python, PHP, etc.).  
+- **Secure** – Integrated with AWS IAM for fine-grained access control and GitHub connection security.  
+ 
 
 ---
 
