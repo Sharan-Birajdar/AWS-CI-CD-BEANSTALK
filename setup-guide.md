@@ -29,17 +29,7 @@ This guide walks you through setting up the project so that pushing code to **Gi
 
 ## ⚙️ Step 2: Prepare Your GitHub Repository
 
-1. Push your website code to a **public or private repo** on GitHub. Example:
-
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial commit"
-   git branch -M main
-   git remote add origin https://github.com/<your-username>/<repo-name>.git
-   git push -u origin main
-   ```
-
+1. Push your website code to a **public or private repo** on GitHub.
 2. Confirm code is visible in your GitHub repo.
 
 ---
@@ -81,27 +71,23 @@ This guide walks you through setting up the project so that pushing code to **Gi
 
 ---
 
-## ⚙️ Step 5: Test the Pipeline
+### Step 5: Configure Route 53 Domain
+1. Open **Route 53 Console** → Hosted Zone for your domain.  
+2. Create a **Record**:  
+   - **Type**: `CNAME` or `Alias`  
+   - **Value**: Elastic Beanstalk environment URL (from Step 2).  
+3. Wait for DNS propagation (may take a few minutes).  
+4. Test your custom domain (e.g., `https://yourdomain.com`).
+
+---
+
+## ⚙️ Step 6: Test the Pipeline
 
 1. Push a code change to GitHub:
-
-   ```bash
-   git add .
-   git commit -m "Updated index.html"
-   git push origin main
-   ```
-
+   
 2. CodePipeline will automatically trigger:
 
    * Source → Build (if configured) → Deploy
 
 3. Elastic Beanstalk updates the environment with the new code
-
----
-
-## 🎉 Done!
-
-Now your project is fully automated:
-
-* Edit code → Push to GitHub → AWS updates website 🚀
 
