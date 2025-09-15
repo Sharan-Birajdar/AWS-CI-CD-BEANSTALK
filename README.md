@@ -62,21 +62,28 @@ Whenever new code is pushed to the GitHub repository, CodePipeline automatically
 ## 🔑 Key Benefits
 
 1. **Automated Deployments**
-    – No manual intervention needed; every GitHub push is deployed automatically.  
+     – No manual intervention needed; every GitHub push is deployed automatically.
+    
 2. **Scalability**
-    – Elastic Beanstalk automatically handles scaling based on application load.  
+     – Elastic Beanstalk automatically handles scaling based on application load.
+   
 3. **Custom Domain Integration**
-    – Route 53 provides a professional, easy-to-remember domain name.  
+     – Route 53 provides a professional, easy-to-remember domain name.
+   
 4. **Reduced Downtime**
-    – Blue/Green or Rolling updates in Beanstalk minimize downtime during deployments.  
+     – Blue/Green or Rolling updates in Beanstalk minimize downtime during deployments.
+   
 5. **Centralized Pipeline**
-    – CodePipeline provides a single place to manage CI/CD.  
+     – CodePipeline provides a single place to manage CI/CD.
+   
 6. **Cost-Effective**
-    – Pay only for the AWS resources you use, with built-in monitoring and logging.  
+     – Pay only for the AWS resources you use, with built-in monitoring and logging.
+     
 7. **Flexibility**
-    – Works with multiple programming languages (Node.js, Java, Python, PHP, etc.).  
+     – Works with multiple programming languages (Node.js, Java, Python, PHP, etc.).
+    
 8. **Secure**
-    – Integrated with AWS IAM for fine-grained access control and GitHub connection security.  
+     – Integrated with AWS IAM for fine-grained access control and GitHub connection security.  
  
 
 ---
